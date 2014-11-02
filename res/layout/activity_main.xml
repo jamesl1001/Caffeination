@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    
+    <!-- FEATURED CONTAINER -->
+    <RelativeLayout
+        android:id="@+id/featured"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="@color/l_blue"
+        android:paddingTop="@dimen/margin_half"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:paddingBottom="@dimen/margin_half" >
+        
+        <ProgressBar
+            android:id="@+id/featured_image_progress"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+	  		android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@+id/featured_image"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+	  		android:layout_centerVertical="true"
+	    	android:layout_marginRight="@dimen/margin_half"
+            android:contentDescription="@string/alt_product_image" />
+        
+        <TextView
+            android:id="@+id/featured_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/featured_image"
+	        android:layout_marginBottom="@dimen/margin_half"
+	        android:text="@string/featured"
+	        android:textColor="@color/d_blue"
+	        android:textSize="@dimen/list_title" />
+        
+        <TextView
+            android:id="@+id/featured_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/featured_image"
+	        android:layout_below="@id/featured_title"
+	    	android:textSize="@dimen/list_text" />
+        
+        <TextView
+            android:id="@+id/featured_price"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:layout_toRightOf="@id/featured_name"
+	        android:layout_below="@id/featured_title"
+	        android:layout_marginLeft="@dimen/margin_half"
+	        android:textColor="@color/grey"
+	    	android:textSize="@dimen/list_text" />
+        
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+	  		android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+     	    android:src="@drawable/ic_action_next_item"
+            android:contentDescription="@string/alt_right_arrow" />
+    </RelativeLayout>
+    
+    <!-- 4 BUTTONS CONTAINER  -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/m_blue"
+        android:paddingTop="@dimen/margin"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:paddingBottom="@dimen/margin" >
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+        	android:orientation="horizontal" >
+        
+	        <Button
+		        android:id="@+id/button_drinks"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight=".5"
+	            android:layout_marginRight="@dimen/margin_half"
+		        android:layout_marginBottom="@dimen/margin_half"
+		        android:background="@drawable/button_states"
+		        android:drawableBottom="@drawable/menu_drinks"
+		        android:text="@string/button_drinks"
+		        android:textColor="@color/l_blue"
+		        android:textSize="@dimen/l_btn_text"
+		        android:textStyle="bold" />
+	        
+	        <Button
+		        android:id="@+id/button_shots"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight=".5"
+	            android:layout_marginLeft="@dimen/margin_half"
+		        android:layout_marginBottom="@dimen/margin_half"
+		        android:background="@drawable/button_states"
+		        android:drawableBottom="@drawable/menu_shots"
+		        android:text="@string/button_shots"
+		        android:textColor="@color/l_blue"
+		        android:textSize="@dimen/l_btn_text"
+		        android:textStyle="bold" />
+        
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+        	android:orientation="horizontal" >
+        
+	        <Button
+	            android:id="@+id/button_favourites"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight=".5"
+		        android:layout_marginTop="@dimen/margin_half"
+	            android:layout_marginRight="@dimen/margin_half"
+	            android:background="@drawable/button_states"
+	            android:drawableBottom="@drawable/menu_favourites"
+	            android:text="@string/button_favourites"
+	            android:textColor="@color/l_blue"
+	            android:textSize="@dimen/l_btn_text"
+	            android:textStyle="bold" />
+	        
+	        <Button
+	            android:id="@+id/button_cart"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight=".5"
+		        android:layout_marginTop="@dimen/margin_half"
+	            android:layout_marginLeft="@dimen/margin_half"
+	            android:background="@drawable/button_states"
+	            android:drawableBottom="@drawable/menu_cart"
+	            android:text="@string/button_cart"
+	            android:textColor="@color/l_blue"
+	            android:textSize="@dimen/l_btn_text"
+	            android:textStyle="bold" />
+    	
+    	</LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

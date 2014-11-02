@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:layout_marginRight="@dimen/margin_half" >
+
+    <RelativeLayout
+        android:id="@+id/product_list_image_wrapper"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/margin_half"
+        android:layout_marginBottom="@dimen/margin_half" >
+	    <ProgressBar
+	        android:id="@+id/product_list_image_progress"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+		    android:layout_centerInParent="true" />
+	    <ImageView
+		    android:id="@+id/product_list_image"
+	        android:layout_width="56dp"
+		    android:layout_height="56dp"
+		    android:layout_centerInParent="true"
+		    android:layout_marginRight="@dimen/margin_half"
+		    android:contentDescription="@string/alt_product_image" />
+	</RelativeLayout>
+    
+    <TextView
+	    android:id="@+id/product_list_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@id/product_list_image_wrapper"
+	    android:layout_toRightOf="@id/product_list_image_wrapper"
+	    android:layout_marginTop="4dp"
+	    android:layout_marginBottom="@dimen/margin_half"
+	    android:textColor="@color/d_blue"
+	    android:textSize="@dimen/list_title" />
+	<TextView
+	    android:id="@+id/product_list_price"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@id/product_list_name"
+        android:layout_toLeftOf="@+id/cart_button_remove"
+	    android:textColor="@color/m_blue"
+	    android:textSize="@dimen/list_text"
+	    android:textStyle="bold" />
+	<Button
+	    android:id="@+id/product_list_quantity_minus"
+	    android:layout_width="40dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/product_list_name"
+	    android:layout_toRightOf="@+id/product_list_image_wrapper"
+	    android:layout_marginBottom="@dimen/margin_half"
+	    android:paddingTop="0dp"
+	    android:paddingBottom="0dp"
+	    android:background="@drawable/small_button_states"
+	    android:text="@string/button_minus"
+	    android:textColor="@color/l_blue" />
+	<TextView
+	    android:id="@+id/product_list_quantity"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/product_list_name"
+	    android:layout_toRightOf="@id/product_list_quantity_minus"
+	    android:layout_marginLeft="@dimen/margin_half"
+	    android:layout_marginRight="@dimen/margin_half"
+	    android:minWidth="24dp"
+	    android:gravity="center" />
+	<Button
+	    android:id="@+id/product_list_quantity_plus"
+	    android:layout_width="40dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/product_list_name"
+	    android:layout_toRightOf="@id/product_list_quantity"
+	    android:layout_marginBottom="@dimen/margin_half"
+	    android:paddingTop="0dp"
+	    android:paddingBottom="0dp"
+	    android:background="@drawable/small_button_states"
+	    android:text="@string/button_plus"
+	    android:textColor="@color/l_blue" />
+	<Button
+	    android:id="@+id/cart_button_remove"
+	    android:layout_width="32dp"
+	    android:layout_height="fill_parent"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentRight="true"
+	    android:background="@null"
+	    android:text="@string/button_remove"
+	    android:textColor="@color/d_blue"
+	    android:textStyle="bold"
+		android:textSize="@dimen/m_btn_text" />
+	    
+</RelativeLayout>

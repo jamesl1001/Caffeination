@@ -1,0 +1,86 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/l_blue"
+    android:paddingTop="@dimen/margin"
+    android:paddingLeft="@dimen/margin"
+    android:paddingRight="@dimen/margin"
+    android:paddingBottom="@dimen/margin"
+    tools:context=".CheckoutActivity" >
+    
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+    
+	    <TextView
+	        android:id="@+id/checkout_total"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="@dimen/margin"
+	        android:textSize="@dimen/list_title"
+	        android:textColor="@color/d_blue" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/checkout_instructions" />
+		
+		<EditText
+	        android:id="@+id/checkout_name"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="textCapWords"
+			android:hint="@string/hint_name" />
+		
+		<EditText
+	        android:id="@+id/checkout_house_number"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="number"
+			android:hint="@string/hint_house" />
+		
+		<EditText
+	        android:id="@+id/checkout_postcode"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:maxLength="7"
+	        android:inputType="textCapCharacters"
+			android:hint="@string/hint_postcode" />
+		
+		<EditText
+	        android:id="@+id/checkout_email"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="textEmailAddress"
+			android:hint="@string/hint_email" />
+		
+		<DatePicker
+		    android:id="@+id/checkout_date"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:calendarViewShown="false" />
+	    
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+			<Button
+			    android:id="@+id/checkout_button"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight=".5"
+			    android:text="@string/button_submit" />
+		    
+			<Button
+			    android:id="@+id/checkout_home"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight=".5"
+			    android:enabled="false"
+			    android:text="@string/button_return" />
+		</LinearLayout>
+	
+	</LinearLayout>
+</ScrollView>

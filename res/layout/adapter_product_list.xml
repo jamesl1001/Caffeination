@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_list"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp" >
+
+    <RelativeLayout
+        android:id="@+id/product_list_image_wrapper"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/margin_half"
+        android:layout_marginBottom="@dimen/margin_half"
+        android:layout_gravity="center_horizontal" >
+		<ProgressBar
+	        android:id="@+id/product_list_image_progress"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+		    android:layout_centerInParent="true" />
+	    <ImageView
+		    android:id="@+id/product_list_image"
+	        android:layout_width="56dp"
+		    android:layout_height="56dp"
+		    android:layout_centerInParent="true"
+		    android:layout_marginLeft="@dimen/margin"
+		    android:layout_marginRight="@dimen/margin_half"
+		    android:contentDescription="@string/alt_product_image" />
+    </RelativeLayout>
+    
+    <TextView
+	    android:id="@+id/product_list_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@id/product_list_image_wrapper"
+	    android:layout_toRightOf="@id/product_list_image_wrapper"
+	    android:layout_marginTop="4dp"
+	    android:layout_marginBottom="@dimen/margin_half"
+	    android:textColor="@color/d_blue"
+	    android:textSize="@dimen/list_title" />
+	<TextView
+	    android:id="@+id/product_list_price"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@id/product_list_name"
+        android:layout_toLeftOf="@+id/product_list_arrow"
+	    android:layout_marginRight="@dimen/margin_half"
+	    android:textColor="@color/m_blue"
+	    android:textSize="@dimen/list_text"
+	    android:textStyle="bold" />
+	
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/product_list_name"
+	    android:layout_toRightOf="@id/product_list_image_wrapper"
+	    android:layout_toLeftOf="@+id/product_list_arrow" >
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal" >
+			<LinearLayout
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+				android:layout_weight=".5"
+			    android:orientation="horizontal" >
+				<TextView
+				    android:id="@+id/product_list_size_label"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginRight="@dimen/margin_half"
+				    android:text="@string/label_size"
+				    android:textColor="@color/l_grey"
+				    android:textSize="@dimen/list_label" />
+				<TextView
+				    android:id="@+id/product_list_size"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textColor="@color/grey"
+				    android:textSize="@dimen/list_info" />
+			</LinearLayout>
+			
+			<LinearLayout
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+				android:layout_weight=".5"
+				android:layout_marginRight="@dimen/margin_half"
+			    android:orientation="horizontal"
+			    android:gravity="right" >
+				<TextView
+				    android:id="@+id/product_list_caffeine_label"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginRight="@dimen/margin_half"
+				    android:text="@string/label_caffeine"
+				    android:textColor="@color/l_grey"
+				    android:textSize="@dimen/list_label" />
+				<TextView
+				    android:id="@+id/product_list_caffeine"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textColor="@color/grey"
+				    android:textSize="@dimen/list_info" />
+			</LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
+	
+    <ImageView
+        android:id="@+id/product_list_arrow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+ 	    android:src="@drawable/ic_action_next_item"
+        android:contentDescription="@string/alt_right_arrow" />
+	    
+</RelativeLayout>

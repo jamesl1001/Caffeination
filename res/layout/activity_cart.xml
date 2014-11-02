@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/l_blue"
+    tools:context=".CartActivity" >
+    
+    <ListView
+        android:id="@+id/cart_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </ListView>
+    
+    <!-- SUBTOTAL SECTION -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    android:paddingTop="@dimen/margin_half"
+	    android:paddingLeft="@dimen/margin"
+	    android:paddingRight="@dimen/margin"
+	    android:paddingBottom="@dimen/margin_half"
+        android:background="@color/m_blue" >
+        
+        <TextView
+	        android:id="@+id/cart_text_subtotal_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:text="@string/label_subtotal"
+	    	android:textColor="@color/grey" />
+        
+        <TextView
+	        android:id="@+id/cart_text_subtotal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_toRightOf="@id/cart_text_subtotal_label"
+	        android:layout_marginLeft="@dimen/margin_half"
+		    android:textSize="@dimen/list_text"
+	        android:textColor="@color/grey"
+		    android:textStyle="bold" />
+        
+        <Button
+	        android:id="@+id/cart_button_checkout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+		    android:background="@drawable/button_states"
+	    	android:enabled="false"
+	        android:text="@string/button_checkout"
+		    android:textColor="@color/l_blue" />
+	</RelativeLayout>
+
+</LinearLayout>

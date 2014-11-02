@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_half" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    
+    	<LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight=".5"
+	        android:orientation="vertical" >
+	    	<TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/filter_sortby" />
+			<RadioGroup
+			    android:id="@+id/filter_sort_by_group"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" >
+			    <RadioButton
+			        android:id="@+id/filter_sort_by_name"
+				    android:layout_width="wrap_content"
+				    android:layout_height="fill_parent"
+			        android:text="@string/filter_name" />
+			    <RadioButton
+			        android:id="@+id/filter_sort_by_price"
+				    android:layout_width="wrap_content"
+				    android:layout_height="fill_parent"
+			        android:text="@string/filter_price" />
+			    <RadioButton
+			        android:id="@+id/filter_sort_by_size"
+				    android:layout_width="wrap_content"
+				    android:layout_height="fill_parent"
+			        android:text="@string/filter_size" />
+			    <RadioButton
+			        android:id="@+id/filter_sort_by_caffeine"
+				    android:layout_width="wrap_content"
+				    android:layout_height="fill_parent"
+			        android:text="@string/filter_caffeine" />
+			</RadioGroup>
+		</LinearLayout>
+		
+    	<LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight=".5"
+	        android:orientation="vertical" >
+	    	<TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/filter_orderby" />
+			<RadioGroup
+			    android:id="@+id/filter_order_group"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:checkedButton="@+id/filter_order_asc" >
+			    <RadioButton
+			        android:id="@+id/filter_order_asc"
+				    android:layout_width="wrap_content"
+				    android:layout_height="fill_parent"
+			        android:text="@string/filter_asc" />
+			    <RadioButton
+			        android:id="@+id/filter_order_desc"
+				    android:layout_width="wrap_content"
+				    android:layout_height="fill_parent"
+			        android:text="@string/filter_desc" />
+			</RadioGroup>
+		</LinearLayout>
+
+	</LinearLayout>
+    
+    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/filter_caffeinerange" />
+	
+    <com.edmodo.rangebar.RangeBar
+	    xmlns:custom="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/filter_rangebar"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+    	custom:tickHeight="4dp" />
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+	    <TextView
+	        android:id="@+id/filter_rangebar_left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:text="0" />
+	    
+	    <TextView
+	        android:id="@+id/filter_rangebar_right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:text="500" />
+	</RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    
+	<!-- NOT CONNECTED MESSAGE -->
+	<TextView
+	    android:id="@+id/not_connected"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/l_blue"
+	    android:paddingBottom="@dimen/margin"
+	    android:paddingLeft="@dimen/margin"
+	    android:paddingRight="@dimen/margin"
+	    android:paddingTop="@dimen/margin"
+	    android:text="@string/not_connected" />
+
+		<android.support.v4.widget.DrawerLayout
+		    android:id="@+id/drawer_layout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent">
+
+		    <ViewStub
+		        android:id="@+id/content_stub"
+		        android:inflatedId="@+id/content_stub_inflated"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent" />
+		 
+			<ListView android:id="@+id/left_drawer"
+		        android:layout_width="240dp"
+		        android:layout_height="fill_parent"
+		        android:layout_gravity="start"
+		        android:choiceMode="singleChoice"
+		        android:divider="@color/l_blue"
+		        android:dividerHeight="1dp"
+		        android:background="@color/m_blue" />
+		 
+		</android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

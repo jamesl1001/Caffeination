@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Caffeination</string>
+
+	<!-- ACTIVITY TITLES -->
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_cart">Cart</string>
+    <string name="title_activity_checkout">Checkout</string>
+    <string name="title_activity_drinks">Drinks</string>
+    <string name="title_activity_favourites">Favourites</string>
+    <string name="title_activity_product_list">Products</string>
+    <string name="title_activity_product">Product</string>
+    <string name="title_activity_shots">Shots</string>
+    <string name="title_activity_shop">Shop</string>
+
+    <string name="action_favourites">Favourites</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- ALT -->
+    <string name="alt_product_image">Product image</string>
+    <string name="alt_right_arrow">Right arrow</string>
+
+    <!-- BUTTONS -->
+    <string name="button_cart">Cart</string>
+    <string name="button_drinks">Drinks</string>
+    <string name="button_favourites">Favs</string>
+    <string name="button_shots">Shots</string>
+    <string name="button_shop">Shop</string>
+    
+    <string name="button_remove">×</string>
+    <string name="button_minus">-</string>
+    <string name="button_plus">+</string>
+    <string name="button_checkout">Checkout</string>
+    
+    <string name="button_submit">Submit purchase</string>
+    <string name="button_return">Return to home</string>
+    
+    <!-- FILTER -->
+    <string name="filter_sortby">Sort by:</string>
+    <string name="filter_orderby">Order by:</string>
+    <string name="filter_caffeinerange">Caffeine range:</string>
+    <string name="filter_name">Name</string>
+    <string name="filter_price">Price</string>
+    <string name="filter_size">Size</string>
+    <string name="filter_caffeine">Caffeine</string>
+    <string name="filter_asc">ASC</string>
+    <string name="filter_desc">DESC</string>
+    
+    
+    <!-- HINTS -->
+    <string name="hint_name">Full name</string>
+    <string name="hint_house">House number</string>
+    <string name="hint_postcode">Postcode</string>
+    <string name="hint_email">Email</string>
+    
+    <!-- LABELS -->
+    <string name="label_price">Price: </string>
+    <string name="label_size">Size: </string>
+    <string name="label_caffeine">Caffeine: </string>
+    <string name="label_subtotal">Subtotal: </string>
+
+    <!-- NAV DRAWER -->
+    <string-array name="items">
+        <item>Home</item>
+        <item>Drinks</item>
+        <item>Shots</item>
+        <item>Favourites</item>
+        <item>Cart</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- HOME -->
+    <string name="featured">Featured:</string>
+    <string name="shop_add_to_cart">Add to cart</string>
+    <string name="not_connected">This app requires an internet connection to function correctly. Please connect to the internet before continuing.</string>
+    
+    <!-- CHECKOUT -->
+    <string name="checkout_instructions">Please fill out the following details:</string>
+    
+
+</resources>

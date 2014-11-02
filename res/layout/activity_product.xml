@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/l_blue"
+    tools:context=".ProductActivity" >
+    
+    <!-- PRODUCT INFO SECTION -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+	    android:padding="@dimen/margin" >
+    
+	    <TextView
+	        android:id="@+id/product_name"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+		    android:textColor="@color/d_blue"
+	        android:textSize="@dimen/product_title" />
+	        
+	    <RelativeLayout
+	        android:layout_width="160dp"
+	        android:layout_height="160dp"
+	        android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/margin"
+			android:layout_marginBottom="@dimen/margin" >
+	        <ProgressBar
+	            android:id="@+id/product_image_progress"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+				android:layout_centerInParent="true" />
+	        <ImageView
+	            android:id="@+id/product_image"
+	            android:layout_width="160dp"
+	            android:layout_height="160dp"
+	            android:layout_centerInParent="true"
+	            android:contentDescription="@string/alt_product_image" />
+	    </RelativeLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:orientation="horizontal" >
+	        <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	       		android:gravity="center"
+	       		android:text="@string/label_price"
+	            android:textSize="12sp"
+		 	    android:textColor="@color/l_grey" />
+	        <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	       		android:gravity="center"
+	       		android:text="@string/label_size"
+	            android:textSize="12sp"
+		 	    android:textColor="@color/l_grey" />
+	        <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	       		android:gravity="center"
+	       		android:text="@string/label_caffeine"
+	            android:textSize="12sp"
+		 	    android:textColor="@color/l_grey" />
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:orientation="horizontal"
+			android:layout_marginTop="@dimen/margin_half"
+			android:layout_marginBottom="@dimen/margin" >
+	        <TextView
+	            android:id="@+id/product_price"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	       		android:gravity="center"
+	            android:textSize="@dimen/product_info"
+		 	    android:textColor="@color/m_blue" />
+	        <TextView
+	            android:id="@+id/product_size"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	       		android:gravity="center"
+	            android:textSize="@dimen/product_info"
+		 	    android:textColor="@color/m_blue" />
+	        <TextView
+	            android:id="@+id/product_caffeine"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	       		android:gravity="center"
+	            android:textSize="@dimen/product_info"
+		 	    android:textColor="@color/m_blue" />
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/product_description"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:maxLines="7"
+	        android:scrollbars="vertical"
+	        android:fadingEdge="vertical"
+	    	android:requiresFadingEdge="vertical"
+	    	android:fadingEdgeLength="@dimen/margin" />
+	</LinearLayout>
+   
+    <!-- ADD TO CART SECTION -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+	    android:paddingTop="@dimen/margin_half"
+	    android:paddingLeft="@dimen/margin"
+	    android:paddingRight="@dimen/margin"
+	    android:paddingBottom="@dimen/margin_half"
+        android:background="@color/m_blue" >
+	    <EditText
+	        android:id="@+id/product_quantity_value"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_marginRight="@dimen/margin_half"
+        	android:maxLength="4"
+	        android:inputType="number"
+	        android:text="1"
+	        android:textColor="@color/grey" />
+	    <Button
+	        android:id="@+id/add_to_cart"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/button_states"
+	        android:text="@string/shop_add_to_cart"
+		    android:textColor="@color/l_blue" />
+	</LinearLayout>
+</RelativeLayout>
